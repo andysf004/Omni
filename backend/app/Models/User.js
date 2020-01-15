@@ -21,13 +21,12 @@ class User extends Model {
     })
   }
 
-
   tokens () {
     return this.hasMany('App/Models/Token')
   }
 
   teams () {
-    return this.belongsToMany('App/Models/Team').pivotModel('App/Model/UserTeam')
+    return this.belongsToMany('App/Models/Team').pivotModel('App/Models/UserTeam')
   }
 }
 
