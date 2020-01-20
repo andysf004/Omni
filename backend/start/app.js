@@ -20,7 +20,9 @@ const providers = [
   'adonis-kue/providers/KueProvider',
   '@adonisjs/redis/providers/RedisProvider',
   '@adonisjs/mail/providers/MailProvider',
-  '@adonisjs/framework/providers/ViewProvider'
+  '@adonisjs/framework/providers/ViewProvider',
+  '@adonisjs/validator/providers/ValidatorProvider',
+  'adonis-acl/providers/AclProvider'
 
 ]
 
@@ -35,7 +37,8 @@ const providers = [
 */
 const aceProviders = [
   '@adonisjs/lucid/providers/MigrationsProvider',
-  'adonis-kue/providers/CommandsProvider'
+  'adonis-kue/providers/CommandsProvider',
+  'adonis-acl/providers/CommandsProvider'
 
 ]
 
@@ -63,6 +66,6 @@ const aliases = {}
 */
 const commands = []
 
-const jobs = ['App/Jobs/InvitationEmail']
+const jobs = ['app/Jobs/InvitationEmail']
 
 module.exports = { providers, aceProviders, aliases, commands, jobs }

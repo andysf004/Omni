@@ -16,9 +16,13 @@ class InvitationEmail {
 
   // This is where the work is done.
   async handle ({ user, team, email }) {
+    console.log(user.username)
+    console.log(team.name)
+    console.log(email)
+
     await Mail.send(
       ['emails.invitation'],
-      { team: team.name, user: user.name },
+      { team: team.name, user: user.username },
       message => {
         message
           .to(email)
